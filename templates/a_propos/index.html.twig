@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block content %}
+
+    <!-- START THE FEATURETTES -->
+{% for information in apropos %}
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-{% if information.id %2  %}2{% else %}1{% endif %}">
+            <h2 class="featurette-heading">{{ information.title }}<span class="text-muted">{{ information.subtitle }}</span></h2>
+            <p class="lead">{{ information.description }}</p>
+        </div>
+        <div class="col-md-5 order-md-{% if information.id %2  %}1{% else %}2{% endif %}">
+            <img src="{{ asset('assets/images/first.jpg') }}" class="img-fluid" alt="Un savoir-faire">
+        </div>
+    </div>
+
+   {% endfor %}
+    <hr class="featurette-divider">
+
+{% endblock %}

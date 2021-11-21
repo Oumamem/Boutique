@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Apropos;
 use App\Entity\Carrier;
 use App\Entity\Category;
 use App\Entity\Header;
@@ -45,5 +46,6 @@ class DashboardController extends AbstractDashboardController
          yield MenuItem::linkToCrud('Produits', 'fa fa-tag', Product::class);
          yield MenuItem::linkToCrud('Transporteurs', 'fa fa-truck', Carrier::class);
          yield MenuItem::linkToCrud('Headers', 'fa fa-desktop', Header::class);
+         yield MenuItem::linkToCrud('A Propos', 'fa fa-desktop', Apropos::class);
     }
 }

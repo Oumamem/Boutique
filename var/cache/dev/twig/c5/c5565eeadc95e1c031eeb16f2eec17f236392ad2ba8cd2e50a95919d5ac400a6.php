@@ -99,7 +99,7 @@ class __TwigTemplate_a5adb9707b300ee685c892cc94ba7e7e1fac337d897a34af1b93848ab74
         <a class=\"navbar-brand\" href=\"";
         // line 39
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">Ma boutique</a>
+        echo "\">Art Shop</a>
         <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\"
                 aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
             <span class=\"navbar-toggler-icon\"></span>
@@ -113,7 +113,7 @@ class __TwigTemplate_a5adb9707b300ee685c892cc94ba7e7e1fac337d897a34af1b93848ab74
         echo "\">Nos produits</a>
                 </li>
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"#\">Qui sommes-nous ?</a>
+                    <a class=\"nav-link\" href=\"a_propos\">Qui sommes-nous ?</a>
                 </li>
                 <li class=\"nav-item active\">
                     <a class=\"nav-link\" href=\"";
@@ -275,8 +275,8 @@ class __TwigTemplate_a5adb9707b300ee685c892cc94ba7e7e1fac337d897a34af1b93848ab74
     <!-- FOOTER -->
     <footer class=\"footer__custom\">
         <p>
-            &copy; 2017-2020 Boutique en ligne <br/>
-            <small>La boutique 100 % made in France</small> <br/>
+            &copy;  Boutique en ligne d'art <br/>
+            <small>La boutique 100 % made in Tunisia by Oumamem</small> <br/>
             <a href=\"#\">Privacy</a> &middot; <a href=\"#\">Terms</a></p>
     </footer>
 </main>
@@ -310,7 +310,7 @@ class __TwigTemplate_a5adb9707b300ee685c892cc94ba7e7e1fac337d897a34af1b93848ab74
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Ma boutique";
+        echo "Art Shop";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -402,7 +402,7 @@ class __TwigTemplate_a5adb9707b300ee685c892cc94ba7e7e1fac337d897a34af1b93848ab74
     <meta name=\"description\" content=\"Projet pour tester Symfony 5\">
     <meta name=\"author\" content=\"Mark Otto, Jacob Thornton, and Bootstrap contributors\">
     <meta name=\"generator\" content=\"Jekyll v4.1.1\">
-    <title>{% block title %}Ma boutique{% endblock %}</title>
+    <title>{% block title %}Art Shop{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href=\"{{ asset('assets/css/bootstrap.min.css') }}\" rel=\"stylesheet\">
@@ -432,7 +432,7 @@ class __TwigTemplate_a5adb9707b300ee685c892cc94ba7e7e1fac337d897a34af1b93848ab74
 <body>
 <header>
     <nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">
-        <a class=\"navbar-brand\" href=\"{{ path('home') }}\">Ma boutique</a>
+        <a class=\"navbar-brand\" href=\"{{ path('home') }}\">Art Shop</a>
         <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\"
                 aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
             <span class=\"navbar-toggler-icon\"></span>
@@ -443,7 +443,7 @@ class __TwigTemplate_a5adb9707b300ee685c892cc94ba7e7e1fac337d897a34af1b93848ab74
                     <a class=\"nav-link\" href=\"{{ path('products') }}\">Nos produits</a>
                 </li>
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"#\">Qui sommes-nous ?</a>
+                    <a class=\"nav-link\" href=\"a_propos\">Qui sommes-nous ?</a>
                 </li>
                 <li class=\"nav-item active\">
                     <a class=\"nav-link\" href=\"{{ path('contact') }}\">Contact</a>
@@ -520,8 +520,8 @@ class __TwigTemplate_a5adb9707b300ee685c892cc94ba7e7e1fac337d897a34af1b93848ab74
     <!-- FOOTER -->
     <footer class=\"footer__custom\">
         <p>
-            &copy; 2017-2020 Boutique en ligne <br/>
-            <small>La boutique 100 % made in France</small> <br/>
+            &copy;  Boutique en ligne d'art <br/>
+            <small>La boutique 100 % made in Tunisia by Oumamem</small> <br/>
             <a href=\"#\">Privacy</a> &middot; <a href=\"#\">Terms</a></p>
     </footer>
 </main>
@@ -531,4 +531,6 @@ class __TwigTemplate_a5adb9707b300ee685c892cc94ba7e7e1fac337d897a34af1b93848ab74
 
 {% block script %}
 {% endblock %}
-</html>", "base.html.twig", "C:\\Users\\oumayma\\PhpstormProjects\\boutique\\templates\\base.html.twig
+</html>", "base.html.twig", "C:\\Users\\oumayma\\PhpstormProjects\\boutique\\templates\\base.html.twig");
+    }
+}

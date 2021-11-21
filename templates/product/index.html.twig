@@ -13,6 +13,8 @@
 
         <div class="col-md-9">
             <h3>Nos produits</h3>
+            <h4>Produits: ({{ products.getTotalItemCount }})</h4>
+            <h5>Produits sur cette page: ({{ products|length }})</h5>
 
             <div class="row product-container">
                 {% for product in products %}
@@ -20,6 +22,9 @@
                         {% include 'product/single_product.html.twig' %}
                     </div>
                 {% endfor %}
+            </div>
+            <div class="navigation">
+            {{ knp_pagination_render(products) }}
             </div>
         </div>
 

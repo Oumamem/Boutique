@@ -6,7 +6,7 @@
     <meta name="description" content="Projet pour tester Symfony 5">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>{% block title %}Ma boutique{% endblock %}</title>
+    <title>{% block title %}Art Shop{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -36,7 +36,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="{{ path('home') }}">Ma boutique</a>
+        <a class="navbar-brand" href="{{ path('home') }}">Art Shop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
                     <a class="nav-link" href="{{ path('products') }}">Nos produits</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Qui sommes-nous ?</a>
+                    <a class="nav-link" href="a_propos">Qui sommes-nous ?</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ path('contact') }}">Contact</a>
@@ -124,8 +124,8 @@
     <!-- FOOTER -->
     <footer class="footer__custom">
         <p>
-            &copy; 2017-2020 Boutique en ligne <br/>
-            <small>La boutique 100 % made in France</small> <br/>
+            &copy;  Boutique en ligne d'art <br/>
+            <small>La boutique 100 % made in Tunisia by Oumamem</small> <br/>
             <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
     </footer>
 </main>

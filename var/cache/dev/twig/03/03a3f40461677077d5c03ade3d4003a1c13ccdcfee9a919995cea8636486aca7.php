@@ -98,12 +98,20 @@ class __TwigTemplate_ccc5eb3bf1aa2d297bdaf985bc3dde72ff9caca804cc65af3697b69eab7
 
         <div class=\"col-md-9\">
             <h3>Nos produits</h3>
+            <h4>Produits: (";
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 16, $this->source); })()), "getTotalItemCount", [], "any", false, false, false, 16), "html", null, true);
+        echo ")</h4>
+            <h5>Produits sur cette page: (";
+        // line 17
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 17, $this->source); })())), "html", null, true);
+        echo ")</h5>
 
             <div class=\"row product-container\">
                 ";
-        // line 18
+        // line 20
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 20, $this->source); })()));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -118,12 +126,12 @@ class __TwigTemplate_ccc5eb3bf1aa2d297bdaf985bc3dde72ff9caca804cc65af3697b69eab7
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 19
+            // line 21
             echo "                    <div class=\"col-md-4\">
                         ";
-            // line 20
-            $this->loadTemplate("product/single_product.html.twig", "product/index.html.twig", 20)->display($context);
-            // line 21
+            // line 22
+            $this->loadTemplate("product/single_product.html.twig", "product/index.html.twig", 22)->display($context);
+            // line 23
             echo "                    </div>
                 ";
             ++$context['loop']['index0'];
@@ -138,8 +146,14 @@ class __TwigTemplate_ccc5eb3bf1aa2d297bdaf985bc3dde72ff9caca804cc65af3697b69eab7
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 23
+        // line 25
         echo "            </div>
+            <div class=\"navigation\">
+            ";
+        // line 27
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 27, $this->source); })()));
+        echo "
+            </div>
         </div>
 
     </div>
@@ -168,7 +182,7 @@ class __TwigTemplate_ccc5eb3bf1aa2d297bdaf985bc3dde72ff9caca804cc65af3697b69eab7
 
     public function getDebugInfo()
     {
-        return array (  142 => 23,  127 => 21,  125 => 20,  122 => 19,  105 => 18,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  154 => 27,  150 => 25,  135 => 23,  133 => 22,  130 => 21,  113 => 20,  107 => 17,  103 => 16,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -188,6 +202,8 @@ class __TwigTemplate_ccc5eb3bf1aa2d297bdaf985bc3dde72ff9caca804cc65af3697b69eab7
 
         <div class=\"col-md-9\">
             <h3>Nos produits</h3>
+            <h4>Produits: ({{ products.getTotalItemCount }})</h4>
+            <h5>Produits sur cette page: ({{ products|length }})</h5>
 
             <div class=\"row product-container\">
                 {% for product in products %}
@@ -195,6 +211,9 @@ class __TwigTemplate_ccc5eb3bf1aa2d297bdaf985bc3dde72ff9caca804cc65af3697b69eab7
                         {% include 'product/single_product.html.twig' %}
                     </div>
                 {% endfor %}
+            </div>
+            <div class=\"navigation\">
+            {{ knp_pagination_render(products) }}
             </div>
         </div>
 

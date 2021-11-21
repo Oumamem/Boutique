@@ -6,6 +6,7 @@ use App\Controller\Classe\Search;
 use App\Entity\Product;
 use App\Form\SearchType;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,7 +28,7 @@ class ProductController extends AbstractController
     /**
      * @Route("/nos-produits", name="products")
      */
-    public function index(Request $request): Response
+    public function index(Request $request, PaginatorInterface $paginator): Response
     {
         $search = new Search();
 
@@ -41,6 +42,12 @@ class ProductController extends AbstractController
         } else {
             $products = $this->entityManager->getRepository(Product::class)->findAll();
         }
+        $products= $paginator->paginate(
+            $products,
+            $request->query->getInt('page',1),
+            9
+        );
+
 
         return $this->render('product/index.html.twig', [
             'products' => $products,
